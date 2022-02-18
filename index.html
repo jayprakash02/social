@@ -66,14 +66,14 @@
       window.addEventListener("load", () => {
         new Sign().print(document.body);
       });
-
+      host=document.location.host;
       class Sign {
         constructor(attr = {}) {
           attr = {
             ...attr,
             ...{
-              href: "https://drdjango.ml",
-              innerText: "drdjango.ml",
+              href: "https://"+host,
+              innerText: host,
               target: "_blank",
               style: {
                 fontFamily: "monospace",
